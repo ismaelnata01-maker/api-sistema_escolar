@@ -9,7 +9,7 @@ export default {
             const { id } = request.params;
             const { cursosIds } = request.body;
 
-            if(cursosIds || !Array.isArray(cursosIds)) {
+            if(!cursosIds || !Array.isArray(cursosIds)) {
                 return response.status(400).json("Cursos inválidos");
             }
 
@@ -38,7 +38,7 @@ export default {
             const { id } = request.params;
             const { cursosIds } = request.body;
 
-            if(!cursosIds || Array.isArray(cursosIds)){
+            if(!cursosIds || !Array.isArray(cursosIds)){
                 return response.status(400).json("Cursos inválidos");
             }
 
