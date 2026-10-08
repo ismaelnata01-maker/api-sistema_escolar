@@ -2,6 +2,7 @@ import { Router } from "express";
 import alunoController from "./controllers/aluno";
 import cursoController from "./controllers/curso";
 import matriculaController from "./controllers/matricula";
+import funcionarioController from "./controllers/funcionario";
 
 //Inicializa o router
 const routes = Router();
@@ -31,6 +32,6 @@ routes.post("/matriculas/:id", matriculaController.create);
 routes.delete("/matriculas/:id", matriculaController.delete);
 
 //Rotas de funcionarios
-routes.post("/login")
+routes.post("/login", funcionarioController.login)
 
 export default routes;
