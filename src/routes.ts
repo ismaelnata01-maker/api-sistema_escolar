@@ -35,4 +35,10 @@ routes.delete("/matriculas/:id", authentication, matriculaController.delete);
 //Rotas de funcionarios
 routes.post("/login", funcionarioController.login)
 
+routes.get("/funcionarios", authentication, alunoController.list);
+routes.get("/funcionarios/:id", authentication, alunoController.getById);
+routes.post("/funcionarios", authentication, alunoController.create);
+routes.put("/funcionarios/:id", authentication, alunoController.update);
+routes.delete("/funcionarios/:id", authentication, alunoController.delete);
+
 export default routes;

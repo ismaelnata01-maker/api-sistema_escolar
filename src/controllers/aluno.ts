@@ -49,7 +49,7 @@ export default{
                     matricula,
                     cpf,
                     nome,
-                    nascimento: new Date(nascimento),
+                    nascimento: nascimento ? new Date(nascimento) : undefined,
                     email,
                     telefone,
                     endereco,
