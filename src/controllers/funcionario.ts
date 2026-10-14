@@ -84,7 +84,7 @@ export default {
                     cargo,
                     nascimento: nascimento ? new Date(nascimento) : undefined,
                     cpf,
-                    senha,
+                    senha: bcrypt.hashSync(senha, +process.env.BCRYPT_ROUNDS!),
                     telefone,
                     endereco,
                 },
