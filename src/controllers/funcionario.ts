@@ -108,6 +108,7 @@ export default {
         try {
             const { id } = request.params;
             const { nome, email, cargo, nascimento, cpf, senha, telefone, endereco } = request.body;
+            console.log(id, nome)
 
             const funcionario = await prisma.funcionario.update({
                 where: {
