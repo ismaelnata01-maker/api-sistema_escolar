@@ -5,7 +5,7 @@ import { handleErrors } from "../helpers/handleErrors";
 export default{
     list: async ( request: Request, response: Response ) => {
         try {
-            const cursos = await prisma.aluno.findMany({
+            const cursos = await prisma.curso.findMany({
                 include: {
                     cursos: true,
                 },
