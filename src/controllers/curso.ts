@@ -7,7 +7,7 @@ export default{
         try {
             const cursos = await prisma.curso.findMany({
                 include: {
-                    cursos: true,
+                    alunos: true,
                 },
             });
 
